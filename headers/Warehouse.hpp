@@ -1,6 +1,7 @@
 #include <string>
 #include <iostream>
 #include <iomanip>
+#include <vector>
 #include "OrderStack.hpp"
 #include "InventoryStack.hpp"
 
@@ -12,7 +13,7 @@ public:
     void AddDeliveryToStack();
     void FillOrder();
     bool IsOrderFilled(OrderStackNode* orderNode) const;
-    void PrintOrderDetails(OrderStackNode* orderNode, InventoryStackNode* deliveryHead, int totalShipped, double warehouseCost, double customerCost);
+    void PrintOrderDetails(OrderStackNode* orderNode, vector<Deliveries> delivery, int totalShipped, double warehouseCost, double customerCost);
     void PrintOrders();
     void PrintInventory();
     void EmptyStacks();
