@@ -23,7 +23,6 @@ void OrderStack::Push(Order newOrder) {
         head = newHead;
     } else {
         cout << "Cant add anymore orders to the stack, low on memory\n";
-        delete newHead;
     }
 }
 

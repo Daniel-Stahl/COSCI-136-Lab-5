@@ -16,7 +16,7 @@ void MainMenu() {
     
     do {
 
-        cout << "Main Menu\n 1) Create Order\n 2) Recieve Delivery\n 3) Fill Order\n 4) Print orders\n 5) Exit Program\n Choice: ";
+        cout << "Main Menu\n 1) Create Order\n 2) Recieve Delivery\n 3) Fill Order\n 4) Print orders\n 5) Print inventory\n 6) Exit Program\n Choice: ";
         cin >> userChoice;
         
         switch (userChoice) {
@@ -40,9 +40,14 @@ void MainMenu() {
                 warehouse.PrintOrders();
                 
                 break;
+            case 5:
+                // Print inventory
+                warehouse.PrintInventory();
+                
+                break;
         }
         
-    } while (userChoice != 5);
+    } while (userChoice != 6);
 }
 
 /*
