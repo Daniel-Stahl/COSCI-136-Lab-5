@@ -30,24 +30,36 @@ void Warehouse::AddDeliveryToStack() {
     Deliveries newDelivery;
     int itemRecieved = 0;
     double itemCost = 0.0;
-    
-    do {
-        cout << "\nHow many items in delivery? ";
-        cin >> itemRecieved;
         
-        cout << "\nCost per item? ";
-        cin >> itemCost;
-        
-        if (itemRecieved <= 0 || itemCost <= 0.0) {
-            cout << "\nError: Items recieved and cost must be higher than 0, please try again.\n";
+        while (itemRecieved <= 0) {
+            cout << "\nHow many items in delivery? ";
+            cin >> itemRecieved;
+            CheckInput(itemRecieved);
         }
         
-    } while (itemRecieved <= 0 || itemCost <= 0.0);
+        
+        while (itemCost <= 0.0) {
+            cout << "\nCost per item? ";
+            cin >> itemCost;
+            CheckInput(itemCost);
+        }
     
     newDelivery.SetDeliveries(itemRecieved, itemCost);
     inventoryStack.Push(newDelivery);
     FillOrder();
     
+}
+
+void Warehouse::CheckInput(int input) {
+    if (input <= 0) {
+        cout << "\nError: Items recieved must be higher than 0, please try again.\n";
+    }
+}
+    
+void Warehouse::CheckInput(double input) {
+    if (input <= 0.0) {
+        cout << "\nError: Item cost must be higher than 0, please try again.\n";
+    }
 }
 
 void Warehouse::FillOrder() {

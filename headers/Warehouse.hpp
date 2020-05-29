@@ -11,6 +11,8 @@ class Warehouse {
 public:
     void AddOrderToStack();
     void AddDeliveryToStack();
+    void CheckInput(int input);
+    void CheckInput(double input);
     void FillOrder();
     bool IsOrderFilled(OrderStackNode* orderNode) const;
     void PrintOrderDetails(OrderStackNode* orderNode, vector<Deliveries> delivery, int totalShipped, double warehouseCost, double customerCost);

@@ -50,10 +50,14 @@ void MainMenu() {
  Order input -100 = Error
  
  Order input 5 = Order ID#: 1, QTY: 5
- Delivery input -0, 9 = Error
- Delivery input 0, -1 = Error
- Delivery input -43, 43 = Error
- Delivery input 3, 2 = Delivery ID#: 1, QTY: 3, Cost: 2
+ Delivery input -0 = Error
+ Delivery input 0 = Error
+ Delivery input -43 = Error
+ Delivery input 3 = Good!
+ Delivery Cost -1 = Error
+ Delivery cost -43 = Error
+ Delivery cost 2 = Good!
+ Delivery ID#: 1, QTY: 3, Cost: 2
  
  Order Filled Result:
  Order#: 1, QTY: 5 Shipped: 3, Remaining: 2
@@ -119,21 +123,27 @@ void MainMenu() {
 
  How many items in delivery? -0
 
- Cost per item? 9
-
- Error: Items recieved and cost must be higher than 0, please try again.
+ Error: Items recieved must be higher than 0, please try again.
 
  How many items in delivery? 0
 
- Cost per item? -1
-
- Error: Items recieved and cost must be higher than 0, please try again.
+ Error: Items recieved must be higher than 0, please try again.
 
  How many items in delivery? -43
 
- Cost per item? 43
+ Error: Items recieved must be higher than 0, please try again.
 
- Error: Items recieved and cost must be higher than 0, please try again.
+ How many items in delivery? 3
+
+ Cost per item? -1
+
+ Error: Item cost must be higher than 0, please try again.
+
+ Cost per item? -43
+
+ Error: Item cost must be higher than 0, please try again.
+
+ Cost per item? 2
 
  How many items in delivery? 3
 
